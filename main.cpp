@@ -1,17 +1,11 @@
-#include <QCoreApplication>
-#include <fstream>
-#include <math.h>
-#include <iostream>
-using namespace std;
+#include "mainwindow.h"
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
-      ofstream myfile;
-//      myfile.open("C:\User\gener\Documents\LAB254187\example.txt");
-      myfile.open ("example.txt");
-      myfile << "Writing this to a file.\n";
-      myfile.close();
-    return 0;
-}
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
 
+    return a.exec();
+}
